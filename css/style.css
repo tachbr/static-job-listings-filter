@@ -1,0 +1,220 @@
+body {
+  text-align: center;
+  background-color: hsl(180, 52%, 96%);
+  font-family: 'Spartan', sans-serif;
+}
+
+span {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+a {
+  color: hsl(180, 29%, 50%);
+  font-size: 0.9rem;
+}
+
+.heading {
+  background-image: url('../images/bg-header-desktop.svg');
+  background-color: hsl(180, 29%, 50%);
+  height: 80px;
+}
+
+.tags {
+  color: hsl(180, 29%, 50%);
+  background-color: hsl(180, 31%, 95%);
+  border-radius: 5px;
+  padding: 5px;
+  margin:10px;
+  display: inline-grid;
+}
+
+.tags:hover {
+  color: hsl(180, 52%, 96%);
+  background-color: hsl(180, 29%, 50%);
+}
+
+.listing {
+  display:grid;
+  grid-template-columns: [first] 12% [image] 38% [job] 50% [tags];
+  grid-template-rows: [start-row] 40px [top-row] 30px [middle-row] 30px [bottom-row];
+
+  background-color: #fff;
+  box-shadow: 5px 5px 5px hsl(180, 8%, 52%);
+
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom:20px;
+  padding: 20px;
+}
+
+.listing:hover {
+  border-left: 3px solid hsl(180, 29%, 50%);
+}
+
+.listing-img {
+  grid-column-start: first;
+  grid-column-end: image;
+  grid-row-start: start-row;
+  grid-row-end: bottom-row;
+}
+
+.top-row {
+  grid-column-start: image;
+  grid-column-end: job;
+  grid-row-start: start-row;
+  grid-row-end: top-row;
+  justify-self: start;
+  align-self:center;
+}
+
+.top-row div {
+  margin-right: 10px;
+}
+
+.job-title {
+  grid-column-start: image;
+  grid-column-end: job;
+  grid-row-start: top-row;
+  grid-row-end: middle-row;
+  justify-self: start;
+  align-self: center;
+  font-weight: 700;
+}
+
+.job-title:hover {
+  color: hsl(180, 29%, 50%);
+
+}
+
+.job-description {
+  grid-column-start: image;
+  grid-column-end: job;
+  grid-row-start: middle-row;
+  grid-row-end: bottom-row;
+  justify-self: start;
+  align-self: center;
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: hsl(180, 8%, 52%);
+}
+
+.tag-section {
+  grid-column-start: job;
+  grid-column-end: tags;
+  grid-row-start: top-row;
+  grid-row-end: middle-row;
+  justify-self: end;
+  align-self: center;
+}
+
+
+.job-details {
+  display: inline-grid;
+}
+
+.job-company {
+  display: inline-grid;
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+  font-size: 0.9rem;
+}
+
+.new {
+  display: inline-grid;
+  background-color: hsl(180, 29%, 50%);
+  border-radius: 20px;
+  color: hsl(180, 31%, 95%);
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  font-size: 0.9rem;
+}
+
+.featured {
+  display:inline-grid;
+  background-color: hsl(180, 14%, 20%);
+  color: hsl(180, 31%, 95%);
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+
+
+.inactive {
+  display:none;
+}
+
+
+.selection {
+  display: none;
+  height: 60px;
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: -20px;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 5px 5px 5px hsl(180, 8%, 52%);
+}
+
+.active {
+  display: block;
+}
+
+
+.show-selection {
+  display:grid;
+  grid-template-columns: [first-col] 80% [mid-col]  20% [end-col];
+  grid-template-rows: [start-row] 60px [end-row];
+}
+
+
+.remove-icon {
+  padding-top: 8px;
+
+}
+
+.remove-icon:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.selection-tags {
+  color: hsl(180, 29%, 50%);
+  background-color: hsl(180, 31%, 95%);
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.outer-div {
+  margin: 15px;
+  /* align-self: flex-start; */
+}
+
+.img-div {
+  display: inline-block;
+  background-color: hsl(180, 29%, 50%);
+  width:30px;
+  height: 100%
+}
+
+.selection-container {
+  display:flex;
+}
+
+.link-div {
+  grid-column-start: mid-col;
+  grid-column-end: end-col;
+  grid-row-start: start-row;
+  grid-row-end: end-row;
+  justify-self: end;
+  align-self: center;
+}
